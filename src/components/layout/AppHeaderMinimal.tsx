@@ -1,8 +1,12 @@
+
 "use client";
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { usePathname } from 'next/navigation';
 
 const getTitleFromPathname = (pathname: string): string => {
+  if (pathname === '/login') return 'Login';
+  if (pathname === '/register') return 'Register';
+  if (pathname === '/profile') return 'My Profile';
   if (pathname.includes('/dashboard')) return 'Dashboard';
   if (pathname.includes('/curation')) return 'Discover Content';
   if (pathname.includes('/modules/')) return 'Learning Module';

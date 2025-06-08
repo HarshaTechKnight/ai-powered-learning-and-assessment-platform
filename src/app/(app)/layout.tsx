@@ -1,8 +1,9 @@
+
 import type { ReactNode } from 'react';
 import { SidebarProvider, Sidebar, SidebarHeader, SidebarContent, SidebarFooter, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarInset } from '@/components/ui/sidebar';
 import { SidebarNav } from '@/components/layout/SidebarNav';
 import { AppHeaderMinimal } from '@/components/layout/AppHeaderMinimal';
-import { Settings, LogOut } from 'lucide-react';
+import { UserCircle, LogOut } from 'lucide-react'; // Changed Settings to UserCircle
 import Link from 'next/link';
 
 // Simple SVG logo for VidyaAI
@@ -32,16 +33,16 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           <SidebarFooter className="p-3 mt-auto border-t">
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild tooltip={{ children: "Settings", side: 'right', align: 'center' }} className="justify-start">
-                  <Link href="#"> {/* Placeholder for settings */}
-                    <Settings className="h-5 w-5" />
-                    <span className="group-data-[collapsible=icon]:hidden">Settings</span>
+                <SidebarMenuButton asChild tooltip={{ children: "Profile Settings", side: 'right', align: 'center' }} className="justify-start">
+                  <Link href="/profile">
+                    <UserCircle className="h-5 w-5" />
+                    <span className="group-data-[collapsible=icon]:hidden">Profile Settings</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
                <SidebarMenuItem>
                 <SidebarMenuButton asChild tooltip={{ children: "Logout", side: 'right', align: 'center' }} className="justify-start text-red-500 hover:bg-red-100 hover:text-red-600 dark:text-red-400 dark:hover:bg-red-900/50 dark:hover:text-red-300">
-                  <Link href="/"> {/* Placeholder for logout */}
+                  <Link href="/login"> {/* Changed to /login to simulate logout */}
                     <LogOut className="h-5 w-5" />
                     <span className="group-data-[collapsible=icon]:hidden">Logout</span>
                   </Link>

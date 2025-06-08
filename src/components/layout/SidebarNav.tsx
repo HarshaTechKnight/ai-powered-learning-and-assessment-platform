@@ -1,9 +1,10 @@
+
 "use client";
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { SidebarMenu, SidebarMenuItem, SidebarMenuButton } from '@/components/ui/sidebar';
-import { LayoutDashboard, BookOpenText, ClipboardCheck, BarChart3, SearchCode, Zap } from 'lucide-react'; // Changed icons
+import { LayoutDashboard, BookOpenText, ClipboardCheck, BarChart3, SearchCode, UserCircle } from 'lucide-react'; // Added UserCircle
 
 const navItems = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -11,6 +12,7 @@ const navItems = [
   { href: '/modules', label: 'My Learning', icon: BookOpenText },
   { href: '/assessments', label: 'Assessments', icon: ClipboardCheck },
   { href: '/progress', label: 'My Progress', icon: BarChart3 },
+  { href: '/profile', label: 'My Profile', icon: UserCircle }, // Added Profile
 ];
 
 export function SidebarNav() {

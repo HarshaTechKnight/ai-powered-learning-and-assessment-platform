@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -33,8 +34,8 @@ export default function HomePage() {
 
         <div>
           <Button asChild size="lg" className="font-body text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <Link href="/dashboard">
-              Start Learning
+            <Link href="/login"> {/* Changed to /login */}
+              Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
